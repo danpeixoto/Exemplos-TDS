@@ -1,2 +1,2 @@
 # Exemplos-TDS
-Exemplos das linguagens JavaScript e TypeScript para a apresentação da matéria TDS
+## Exemplos básicos das linguagens JavaScript e TypeScript para dar uma visão geral sobre elas durante a apresentação da matéria TDS.
