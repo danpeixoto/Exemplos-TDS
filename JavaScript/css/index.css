@@ -40,7 +40,7 @@ body {
     background-color: #fff;
     min-width: 198px;
 }
-.menu-principal a {
+.menu-principal nav a {
     display: block;
     padding: 10px 0px;
     text-decoration: none;
@@ -48,7 +48,7 @@ body {
     font-size: 1.2em;
 }
 
-.menu-principal a:hover {
+.menu-principal nav a:hover {
     background-color: rgba(79, 173, 219, .4);
 }
 

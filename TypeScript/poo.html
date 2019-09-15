@@ -36,13 +36,52 @@
             let programador = new Funcionario('Bruce','Wayne','Programador');
             
             console.log(programador.cumprimentar('Daniel'));
-            
-            
+            //////////////////////////////////////////////////////////////////
+
+            interface Lua {
+                nome: string;
+                circunferencia: number;
+            }
+
+            abstract class Planeta {
+                public nome: string;
+                public circunferencia: number;
+                public Luas: Lua[];
+
+                constructor(nome: string, circunferencia: number, Luas: Lua[] = []) {
+                    this.nome = nome;
+                    this.circunferencia = circunferencia;
+                    this.Luas = Luas;
+                };
+
+                addLua = (Lua: Lua) => {
+                    this.Luas.push(Lua);
+                };
+
+                abstract getRotationSpeedMph: () => number;
+            }
+
+            class Terra extends Planeta {
+                private rotationMetersPerSecond = 460;
+                private metersInMile = 1609.34;
+                private secondsInMinute = 60;
+                private minutesInHour = 60;
+
+                getRotationSpeedMph = () => {
+                    return (this.rotationMetersPerSecond * this.secondsInMinute * this.minutesInHour) / this.metersInMile;
+                }
+            }
+
+
+            const terra = new Terra('Home', 24901, [{ nome: 'Lua', circunferencia: 6786 } as Lua]);
+
+            console.log(`Oi! Meu nome é ${terra.nome} e eu estou girando a ${terra.getRotationSpeedMph().toFixed(2)} mph!`);
+                        
             </code>
         </pre>
 
     <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
     <script src='./scripts/poo.js'></script>
-</body >
+</body>
 
-</html >
+</html>
