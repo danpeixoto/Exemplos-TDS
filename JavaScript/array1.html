@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/code.css">
+    <title>Array</title>
+</head>
+
+<body>
+    <h1><a href="./index.html">Tipo: Array</a></h1>
+    <pre>
+        <code class="prettyprint">
+            let linguagensDeProgramação = ['JavaScript','Python','Java','HTML'];
+            console.log(linguagensDeProgramação);
+    
+            //linguagensDeProgramação.pop()
+            //linguagensDeProgramação.length = 3;
+            //delete linguagensDeProgramação[3]; // não indexa o array apos a exclusão
+            linguagensDeProgramação.splice(3,1); // remove 1 dado a partir do 3° elemento 
+    
+            linguagensDeProgramação.push('PHP');
+            linguagensDeProgramação[4] = 'C#';
+    
+            console.log(linguagensDeProgramação);
+    
+            console.log('LP organizadas:',linguagensDeProgramação.sort()); 
+            // o array é ordenado de acordo com a potuação de código Unicode de cada um dos caracteres
+    
+    
+            let mistura = ['Daniel',19,[3,4],10.0];
+            mistura[4] = ()=>{console.log('oi')};
+            console.log(mistura);
+            console.log(mistura[2]);
+            console.log(mistura[4]);
+            mistura[4]();
+        </code>
+    </pre>
+
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+    <script>
+        let linguagensDeProgramação = ['JavaScript', 'Python', 'Java', 'HTML'];
+        console.log(linguagensDeProgramação);
+
+        //linguagensDeProgramação.pop()
+        //linguagensDeProgramação.length = 3;
+        linguagensDeProgramação.splice(3, 1); // remove 1 dado a partir do 3° elemento 
+
+        linguagensDeProgramação.push('PHP');
+        linguagensDeProgramação[4] = 'C#';
+
+        console.log(linguagensDeProgramação);
+
+        console.log('LP organizadas:', linguagensDeProgramação.sort());
+        // o array é ordenado de acordo com a potuação de código Unicode de cada um dos caracteres
+
+
+        let mistura = ['Daniel', 19, [3, 4], 10.0];
+        mistura[4] = () => { console.log('oi') };
+        console.log(mistura);
+        console.log(mistura[2]);
+        console.log(mistura[4]);
+        mistura[4]();
+    </script>
+</body>
+
+</html>

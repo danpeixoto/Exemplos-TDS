@@ -1,0 +1,28 @@
+h1 {
+    background-color: #f0db4f;
+    font-size: 42px;
+    padding: 10px;
+    outline: 0;
+    margin: 0;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: #323330;
+}
+
+pre {
+    margin-top: 0;
+    background: #f4f4f4;
+    border: 1px solid #ddd;
+    border-left: 3px solid #f0db4f;
+    color: #000000;
+    font-family: monospace;
+    font-size: 2.0em;
+    max-width: 100%;
+    padding-top: 10px;
+    display: block;
+    overflow: auto;
+    word-wrap: break-word;
+}

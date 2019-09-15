@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    background: yellowgreen;
+    font-size: 22px;
+    font-family: 'Press Start 2P', cursive;
+}
+
+
+.main-container {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-container img{
+    margin: 10px auto;
+    width: 200px;
+    height: 200px;
+}
+
+.main-container h1 {
+    margin: 10% auto;
+    color: white;
+    width: 100%;
+    font-size: 100px;
+    text-shadow: 2px 3px 8px #666666;
+    text-align: center;
+}
+
+.main-container hr {
+    background: #636e19;
+    height: 1.5px;
+    border: none;
+
+}
+
+.main-container #alphabet {
+    max-width: 360px;
+    margin: 0 auto;
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(35px,1fr));
+    grid-gap: 10px;
+    list-style: none;
+
+}
+
+.main-container #alphabet li {
+    display: inline-block;
+    margin: 0 10px 10px 0;
+    text-align: center;
+    list-style: none;
+    width: 35px;
+    height: 35px;
+    padding-top: 4px;
+    padding-bottom: 0px;
+    background: white;
+    color: green;
+    cursor: pointer;
+    border: solid 1px white;
+    border-radius: 4px;
+}
+
+
+.main-container #alphabet li:hover {
+    transition: 0.2s;
+    border: solid 1px white;
+    background: green;
+    color: white;
+}
+
+
+.main-container .segredo {
+    max-width: 360px;
+    margin: 0 auto;
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(35px,1fr));
+    grid-gap: 10px;
+    list-style: none;
+    align-items: center;
+}
+
+.main-container .segredo .letraSegredo {
+    margin: 0 10px 30px 0;
+    text-align: center;
+    font-size: 22px;
+    list-style: none;
+    width: 35px;
+    height: 35px;
+    padding-top: 2px;
+    padding-bottom: 0;
+    background: white;
+    color: green;
+    border: solid 1px white;
+    border-radius: 4px;
+}
+
+.main-container .segredo .espacoSegredo {
+    margin: 0 10px 30px 0px;
+    text-align: center;
+    font-size: 22px;
+    list-style: none;
+    padding-top: 2px;
+    padding-bottom: 0;
+    color: #666666;
+}

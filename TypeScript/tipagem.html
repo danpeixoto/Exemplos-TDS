@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/code.css">
+    <title>Tipagem</title>
+</head>
+
+<body>
+    <h1><a href="./index.html">Tipagem</a></h1>
+    <pre>
+        <code class="prettyprint">
+            export { };//transforma o script em um módulo
+            let num: number;
+            num = 5 + 8;
+            console.log(num);
+            
+            let hexNum: number = 0xf00d;
+            let binaryNum: number = 0b1010;
+            let octalNum: number = 0o744;
+            console.log(`hex:${hexNum};bin:${binaryNum};oct:${octalNum};`);
+            
+            let text: string = 'Valor da string';
+            console.log(text)
+            
+            let verdade: boolean = true;
+            console.log(verdade);
+            
+            let vetor: Array<string> = ['TypeScript', 'JavaScript', 'ECMAScript'];
+            vetor.forEach(e => console.log(e));
+            
+            let tupla: [string, number] = ['minha idade', 20];
+            tupla.reduce((palavra, numero) => {
+                console.log(`${palavra} ${numero}`);
+                return null;
+            });
+            
+            let n: null = null;
+            let u: undefined = undefined;
+            console.log(n, u);
+            </code>
+        </pre>
+
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+    <script src='./scripts/tipagem.js'></script>
+</body>
+
+</html>

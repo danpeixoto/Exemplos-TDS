@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="./css/code.css">
+	<title>Objeto</title>
+</head>
+
+<body>
+	<h1><a href="./index.html">Tipo: Objeto</a></h1>
+	<pre>
+        <code class="prettyprint">
+                let computador = {
+                    cpu:'intel core i5',
+                    memoria:'16GB',
+                    gpu:'NVIDIA GeForce RTX 2080',
+                    ano: 2018,
+                    ligar: ()=>{
+                        console.log('Computador ligando...');
+                        setTimeout(()=>{
+                            console.log('Computador ligado!');
+                        }, 7000);
+                    }
+                }
+        
+                console.log(computador['cpu']);
+                console.log(computador.gpu);
+                computador.ligar();
+        
+        
+                computador.placaMae = 'EVGA X299 FTW K';
+                computador['ssd'] = 'SSD Kingston A400, 120GB';
+                console.log(computador.ssd);
+                console.log(computador.placaMae);
+        
+                console.log(computador.ano);
+                delete computador.ano;
+                console.log(computador.ano);
+        </code>
+    </pre>
+
+	<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+    <script>
+		let computador = {
+            cpu:'intel core i5',
+            memoria:'16GB',
+            gpu:'NVIDIA GeForce RTX 2080',
+            ano: 2018,
+            ligar: ()=>{
+                console.log('Computador ligando...');
+                setTimeout(()=>{
+                    console.log('Computador ligado!');
+                }, 7000);
+            }
+        }
+
+        console.log(computador['cpu']);
+        console.log(computador.gpu);
+        computador.ligar();
+
+
+        computador.placaMae = 'EVGA X299 FTW K';
+        computador['ssd'] = 'SSD Kingston A400, 120GB';
+        console.log(computador.ssd);
+        console.log(computador.placaMae);
+
+        console.log(computador.ano);
+        delete computador.ano;
+        console.log(computador.ano);
+	</script>
+</body>
+
+</html>

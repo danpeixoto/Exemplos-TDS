@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/code.css">
+    <title>Classe</title>
+</head>
+
+<body>
+    <h1><a href="./index.html">Classe</a></h1>
+    <pre>
+        <code class="prettyprint">
+            class contaBancaria {
+                //quando instanciada é transformada em uma função construtora
+                constructor(saldo = 0) {
+                    this._saldo = saldo;
+                }
+    
+                get saldo() {
+                    return this._saldo;
+                }
+    
+                set saldo(valor) {
+                    if (valor > 0) {
+                        this._saldo += valor;
+                    }
+                }
+            }
+    
+            const minhaConta = new contaBancaria(1500);
+            minhaConta.saldo = 1000;
+            console.log(minhaConta.saldo);
+            console.log(typeof (minhaConta));//object
+            //------------------------HERANÇA------------------------
+            class Avo {
+                constructor(sobrenome) {
+                    this.sobrenome = sobrenome
+                }
+            }
+    
+            class Pai extends Avo {
+                constructor(sobrenome, profissao='') {
+                    super(sobrenome)
+                    this.profissao = profissao
+                }
+            }
+    
+            class Filho extends Pai {
+                constructor(nome , sobrenome) {
+                    super(sobrenome);//sempre primeiro
+                    this.nome = nome;  
+                }
+            }
+    
+            const daniel = new Filho('Daniel','Silva');
+            console.log(daniel.nome,daniel.sobrenome,daniel.profissao);
+        </code>
+    </pre>
+
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+    <script>
+        class contaBancaria {
+            //quando instanciada é transformada em uma função construtora
+            constructor(saldo = 0) {
+                this._saldo = saldo;//variavel privada por convenção
+            }
+
+            get saldo() {
+                return this._saldo;
+            }
+
+            set saldo(valor) {
+                if (valor > 0) {
+                    this._saldo += valor;
+                }
+            }
+        }
+
+        const minhaConta = new contaBancaria(1500);
+        minhaConta.saldo = 1000;
+        console.log(minhaConta.saldo);
+        console.log(typeof (minhaConta));//object
+        //------------------------HERANÇA------------------------
+        class Avo {
+            constructor(sobrenome) {
+                this.sobrenome = sobrenome
+            }
+        }
+
+        class Pai extends Avo {
+            constructor(sobrenome, profissao='') {
+                super(sobrenome)
+                this.profissao = profissao
+            }
+        }
+
+        class Filho extends Pai {
+            constructor(nome , sobrenome) {
+                super(sobrenome);//sempre primeiro
+                this.nome = nome;  
+            }
+        }
+
+        const daniel = new Filho('Daniel','Silva');
+        console.log(daniel.nome,daniel.sobrenome,daniel.profissao);
+    </script>
+</body>
+
+</html>

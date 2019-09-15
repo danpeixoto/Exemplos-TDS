@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/code.css">
+    <title>DOM</title>
+    <style>
+        div#conteudo {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            flex-flow: row wrap;
+        }
+
+        div#quadrado {
+            padding: 1px 6px;
+            display: inline-block;
+            width: 150px;
+            height: 150px;
+            background-color: red;
+            margin-left: 20px;
+        }
+
+        div#break {
+            flex-basis: 100%;
+            width: 0px;
+            height: 0px;
+            overflow: hidden;
+        }
+
+        button#pesquisar,
+        form input,
+        form select,
+        form button {
+            width: 100%;
+            height: 100%;
+            font-size: 2em;
+            display: block;
+            margin: 15px;
+        }
+
+        button#cor {
+            width: 150px;
+            height: 150px;
+            font-size: 1.6em;
+            display: inline-block;
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1><a href="./index.html">DOM</a></h1>
+    <pre>
+        <code class="prettyprint">
+                function trocarCorBotao() {
+                    let quadrado = document.querySelector('div > #quadrado');
+                    quadrado.style.backgroundColor = '#' + (Math.random() * 0xFFFFFF &lt;&lt; 0).toString(16);
+                }
+        
+                document.pesquisa.input.value = 'DOM JavaScript';
+                document.pesquisa.lingua.value = 'en-us';
+        </code>
+    </pre>
+    <div id="conteudo">
+        <button id='cor' onclick="trocarCorBotao()">Trocar cor do background</button>
+        <div id="quadrado"></div>
+        <div id="break"></div>
+        <form name="pesquisa" action="http://www.google.com.br/search">
+            <input type="text" name="q" placeholder="Digite o termo...">
+            <select name="hl">
+                <option value="pt-br">Português (Brasil)</option>
+                <option value="en-us">Inglês (Americano)</option>
+            </select>
+            <button id='pesquisar'>Pesquisar</button>
+        </form>
+    </div>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+    <script>
+        function trocarCorBotao() {
+            let quadrado = document.querySelector('div > #quadrado');
+            quadrado.style.backgroundColor = '#' + (Math.random() * 0xFFFFFF << 0).toString(16);
+        }
+
+        document.pesquisa.q.value = 'DOM JavaScript';
+        document.pesquisa.hl.value = 'en-us';
+    </script>
+</body>
+
+</html>

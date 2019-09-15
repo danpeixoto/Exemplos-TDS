@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/code.css">
+    <title>Number</title>
+</head>
+
+<body>
+    <h1><a href="./index.html">Tipo: Number</a></h1>
+    <pre>
+        <code class="prettyprint">
+            // Variaveis do tipo number podem ser interira ou reais;
+            let inteiro = 10;
+            let real = 10.01;
+            
+            console.log(inteiro,real);
+
+            // Também podem ser escritas com notação científica 
+            let a = 123e6;
+            let b = 123e-6;
+            console.log(a,b);
+
+            let soma = inteiro + 2;
+            let sub = inteiro - 2;
+
+            console.log(soma , sub);
+
+            let divisao = inteiro / 2;
+            let mult = real * 2;
+
+            console.log(divisao , mult);
+
+            let potencia = 2**2
+            console.log(potencia);
+
+            //Infinity(positivo) é uma propriedade global que se comporta como infinito na matemática
+            if( Infinity > 9999999999999999.999){
+                console.log('Realmente infinito.');
+            }
+            if( Number.NEGATIVE_INFINITY &lt; -9999999999999999.999){
+                console.log('Realmente infinito.');
+            }
+            console.log(typeof(Infinity));
+
+        </code>
+    </pre>
+
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+    <script>
+       let inteiro = 10;
+       let real = 10.01;
+
+       console.log(inteiro,real);
+
+       // Também podem ser escritas com notação científica 
+       let a = 123e6;
+       let b = 123e-6;
+       console.log(a,b);
+
+
+        let soma = inteiro + 2;
+        let sub = inteiro - 2;
+
+        console.log(soma , sub);
+
+        let divisao = inteiro / 2;
+        let mult = real * 2;
+
+        console.log(divisao , mult);
+
+        let potencia = 2**2
+        console.log(potencia);
+
+        if( Infinity > 9999999999999999.999){
+            console.log('Realmente infinito.');
+        }
+        if( Number.NEGATIVE_INFINITY < -9999999999999999.999){
+            console.log('Realmente infinito negativo.');
+        }
+
+        console.log(typeof(Infinity));
+
+    </script>
+</body>
+
+</html>

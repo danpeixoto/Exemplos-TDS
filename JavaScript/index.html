@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/index.css">
+    <title>Exemplos</title>
+</head>
+
+<body>
+    <div class="conteudo">
+
+        <script>
+            function digiteSeuNome() {
+                let nome = prompt('Digite seu nome:');
+                document.querySelector('nav > button').innerHTML += `, ${nome}.`;
+            }
+        </script>
+
+        <div class="menu-principal">
+            <h1>Exemplos - JavaScript</h1>
+            <nav>
+                <button onclick="digiteSeuNome()">Olá</button>
+                <a href="./variaveis.html">Variaveis</a>
+                <a href="./var.html">Var 1</a>
+                <a href="./var2.html">Var 2</a>
+                <a href="./let.html">Let 1</a>
+                <a href="./let2.html">Let 2</a>
+                <a href="./number.html">Tipo: Number</a>
+                <a href="./string.html">Tipo: String</a>
+            </nav>
+            <nav>
+                <a href="./array1.html">Tipo: Array</a>
+                <a href="./objeto1.html">Tipo: Objeto</a>
+                <a href="./estruturas_controle.html">Estrutura de Controle</a>
+                <a href="./estruturas__repeticao.html">Estrutura de Repetição</a>
+                <a href="./funcoes.html">Funções</a>
+                <a href="./classe.html">Classes</a>
+                <a href="./objeto2.html">Objetos</a>
+                <a href="./array2.html">Array</a>
+            </nav>
+            <nav id="forca">
+                <a href="./dom.html">DOM</a>
+                <a href="./jogo-forca/index.html">Jogo da forca</a>
+            </nav>
+        </div>
+    </div>
+</body>
+
+</html>
+<!-- dica de github page por user:lucasgris-->

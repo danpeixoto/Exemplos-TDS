@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/code.css">
+    <title>Array</title>
+</head>
+
+<body>
+    <h1><a href="./index.html">Array</a></h1>
+    <pre>
+        <code class="prettyprint">
+                //-----------------FOREACH-----------------
+                //Percorre um array
+                const aprovados = ['Agatha', 'Aldo', 'Daniel', 'Raquel']
+                aprovados.forEach(function (nome, indice) {
+                    console.log(`${indice + 1}) ${nome}`);
+                });
+                //-----------------MAP-----------------
+                // transforma um array em outro com o mesmo tamanho
+        
+                const nums = [1, 2, 3, 4, 5];
+                let numsDobro = nums.map(e => e * 2);
+                console.log(numsDobro);
+        
+                const carrinho = [
+                    '{ "nome": "Borracha", "preco": 3.45 }',
+                    '{ "nome": "Caderno", "preco": 13.90 }',
+                    '{ "nome": "Kit de Lapis", "preco": 41.22 }',
+                    '{ "nome": "Caneta", "preco": 7.50 }'
+                ];
+                const paraObjeto = json => JSON.parse(json);
+                const apenasPreco = produto => produto.preco;
+                const paraDinheiro = preco => `R$ ${parseFloat(preco).toFixed(2).replace('.', ',')}`;
+                const resultado = carrinho.map(paraObjeto).map(apenasPreco).map(paraDinheiro);
+                console.log(resultado);
+        
+                //-----------------Filter-----------------
+                // filtra o array original retornando um subarray que atende as condições estabelecidas
+                const produtos = [
+                    { nome: 'Notebook', preco: 2499, fragil: true },
+                    { nome: 'Biz 125', preco: 9.928, fragil: false },
+                    { nome: 'Copo de Vidro', preco: 12.49, fragil: true },
+                    { nome: 'Copo de Plástico', preco: 18.99, fragil: false }
+                ];
+                const caro = produto => produto.preco >= 500;
+                const fragil = produto => produto.fragil;
+                console.log('Produtos caros e frágeis');
+                produtos.filter(caro)
+                    .filter(fragil)
+                    .forEach(item => console.log(item));
+        
+                //-----------------Reduce-----------------
+                // executa uma função reducer para cada membro do array, resultando num único valor de retorno
+                const alunos = [
+                    { nome: 'João', nota: 7.3, bolsista: false },
+                    { nome: 'Maria', nota: 9.2, bolsista: true },
+                    { nome: 'Pedro', nota: 9.8, bolsista: false },
+                    { nome: 'Ana', nota: 8.7, bolsista: true }
+                ];
+        
+        
+                const somaNotas = alunos.map(a => a.nota).reduce(function (acumulador, atual) {
+                    console.log(`Acumulador:${acumulador}; Atual:${atual}`);
+                    return acumulador + atual;
+                }, 0);
+                console.log(somaNotas);
+        
+                const todosBolsistas = (acumulador, atual) => acumulador && atual;
+                console.log(alunos.map(a => a.bolsista).reduce(todosBolsistas));
+                const algumBolsista = (resultado, bolsista) => resultado || bolsista
+                console.log(alunos.map(a => a.bolsista).reduce(algumBolsista))
+        
+                //-----------------Concat-----------------
+                // concatena todos os elementos em um unico array
+                const filhas = ['Ana', 'Maria'];
+                const filhos = ['Daniel', 'Gabriel'];
+                const todos = filhas.concat(filhos);
+                console.log(todos, filhas, filhos);
+        </code>
+    </pre>
+
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+    <script>
+        //-----------------FOREACH-----------------
+        //Percorre um array
+        const aprovados = ['Agatha', 'Aldo', 'Daniel', 'Raquel']
+        aprovados.forEach(function (nome, indice) {
+            console.log(`${indice + 1}) ${nome}`);
+        });
+        //-----------------MAP-----------------
+        // transforma um array em outro com o mesmo tamanho
+
+        const nums = [1, 2, 3, 4, 5];
+        let numsDobro = nums.map(e => e * 2);
+        console.log(numsDobro);
+
+        const carrinho = [
+            '{ "nome": "Borracha", "preco": 3.45 }',
+            '{ "nome": "Caderno", "preco": 13.90 }',
+            '{ "nome": "Kit de Lapis", "preco": 41.22 }',
+            '{ "nome": "Caneta", "preco": 7.50 }'
+        ];
+        const paraObjeto = json => JSON.parse(json);
+        const apenasPreco = produto => produto.preco;
+        const paraDinheiro = preco => `R$ ${parseFloat(preco).toFixed(2).replace('.', ',')}`;
+        const resultado = carrinho.map(paraObjeto).map(apenasPreco).map(paraDinheiro);
+        console.log(resultado);
+
+        //-----------------Filter-----------------
+        // filtra o array original retornando um subarray que atende as condições estabelecidas
+        const produtos = [
+            { nome: 'Notebook', preco: 2499, fragil: true },
+            { nome: 'Biz 125', preco: 9.928, fragil: false },
+            { nome: 'Copo de Vidro', preco: 12.49, fragil: true },
+            { nome: 'Copo de Plástico', preco: 18.99, fragil: false }
+        ];
+        const caro = produto => produto.preco >= 500;
+        const fragil = produto => produto.fragil;
+        console.log('Produtos caros e frágeis');
+        produtos.filter(caro)
+            .filter(fragil)
+            .forEach(item => console.log(item));
+
+        //-----------------Reduce-----------------
+        // executa uma função reducer para cada membro do array, resultando num único valor de retorno
+        const alunos = [
+            { nome: 'João', nota: 7.3, bolsista: false },
+            { nome: 'Maria', nota: 9.2, bolsista: true },
+            { nome: 'Pedro', nota: 9.8, bolsista: false },
+            { nome: 'Ana', nota: 8.7, bolsista: true }
+        ];
+
+
+        const somaNotas = alunos.map(a => a.nota).reduce(function (acumulador, atual) {
+            console.log(`Acumulador:${acumulador}; Atual:${atual}`);
+            return acumulador + atual;
+        }, 0);
+        console.log(somaNotas);
+
+        const todosBolsistas = (acumulador, atual) => acumulador && atual;
+        console.log(alunos.map(a => a.bolsista).reduce(todosBolsistas));
+        const algumBolsista = (resultado, bolsista) => resultado || bolsista
+        console.log(alunos.map(a => a.bolsista).reduce(algumBolsista))
+
+        //-----------------Concat-----------------
+        // concatena todos os elementos em um unico array
+        const filhas = ['Ana', 'Maria'];
+        const filhos = ['Daniel', 'Gabriel'];
+        const todos = filhas.concat(filhos);
+        console.log(todos, filhas, filhos);
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="./css/code.css">
+	<title>String</title>
+</head>
+
+<body>
+	<h1><a href="./index.html">Tipo: String</a></h1>
+	<pre>
+        <code class="prettyprint">
+		let ola = "Olá";
+		let mundo = 'Mundo!!';
+		console.log(ola, mundo);
+
+		let stringGrande = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' +
+			' Nulla condimentum lacinia lacus, ut dignissim dui vulputate et. Nulla facilisi.' +
+			' Phasellus pretium justo sed ligula pharetra, id pharetra arcu congue.';
+
+		// com a \ é necessario tomar cuidado , poi não pode tem após ela nenhum caractere
+		// somente uma quebra de linha 
+
+		let stringGrande2 = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. \
+			Nulla condimentum lacinia lacus, ut dignissim dui vulputate et. Nulla facilisi.\
+			Phasellus pretium justo sed ligula pharetra, id pharetra arcu congue.";
+
+		console.log('stringGrande:', stringGrande);
+		console.log('stringGrande2:', stringGrande2);
+
+		console.log(ola.charAt(2));
+		console.log(ola[2]); //strings podem se comportar como um array, introduzido no ES5;
+
+		console.log('----------------------------------Template String (ES6)--------------------------------------');
+		let str = ` oi 
+			isso é um teste
+		`;
+		console.log(str);
+
+		console.log(`${ola} ${mundo}`);
+        </code>
+    </pre>
+
+	<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+    <script>
+		let ola = "Olá";
+		let mundo = 'Mundo!!';
+		console.log(ola, mundo);
+
+		let stringGrande = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' +
+			' Nulla condimentum lacinia lacus, ut dignissim dui vulputate et. Nulla facilisi.' +
+			' Phasellus pretium justo sed ligula pharetra, id pharetra arcu congue.';
+
+		// com a \ é necessario tomar cuidado , poi não pode tem após ela nenhum caractere
+		// somente uma quebra de linha 
+		let stringGrande2 = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. \
+Nulla condimentum lacinia lacus, ut dignissim dui vulputate et. Nulla facilisi.\
+Phasellus pretium justo sed ligula pharetra, id pharetra arcu congue.";
+
+		console.log('stringGrande:', stringGrande);
+		console.log('stringGrande2:', stringGrande2);
+
+		console.log(ola.charAt(2));
+		console.log(ola[2]); //strings podem se comportar como um array, introduzido no ES5;
+
+		console.log('----------------------------------Template String (ES6)--------------------------------------');
+		let str = ` oi 
+			isso é um teste
+		`;
+		console.log(str);
+
+		console.log(`${ola} ${mundo}`);
+
+	</script>
+</body>
+
+</html>

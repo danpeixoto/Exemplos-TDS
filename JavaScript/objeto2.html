@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="./css/code.css">
+	<title>Objeto</title>
+</head>
+
+<body>
+	<h1><a href="./index.html">Objeto</a></h1>
+	<pre>
+        <code class="prettyprint">
+        //Criação de um objeto
+        let a = 1 , b = 2 , c = 3;
+        const objeto1 = {a:a,b:b,c:c};
+        const objeto2 = {a,b,c} //ES6
+        const objeto3 = new Object({a,b,c})
+        console.log(objeto1,objeto2,objeto3);
+
+        //Métodos de um objeto
+        const pessoa = {
+            nome:'Fulano',
+            idade:'?',
+            dizerOi: function(){
+                console.log('Oi :)')
+            }
+        }
+        //getter/setter
+        const sequencia = {
+            _valor,//privado por convenção, mas qualquer um pode acessar
+            get valor(){return this._valor++},
+            set valor(valor){_valor=valor;}
+        }
+
+        //Funções importantes de objetos
+        console.log(Object.keys(pessoa))
+        console.log(Object.values(pessoa))
+        console.log(Object.entries(pessoa))
+
+        Object.entries(pessoa).forEach(([chave, valor]) => {
+            console.log(`${chave}: ${valor}`)
+        })
+
+        Object.defineProperty(pessoa, 'dataNascimento', {
+            enumerable: true,
+            writable: false,
+            value: '01/01/2019'
+        })
+
+        pessoa.dataNascimento = '01/01/2017'
+        console.log(pessoa.dataNascimento)
+        console.log(Object.keys(pessoa))
+
+        // Object.assign (ECMAScript 2015)
+        const dest = { a: 1 }
+        const o1 = { b: 2 }
+        const o2 = { c: 3, a: 4 }
+        const obj = Object.assign(dest, o1, o2)//passa os atributos dos outros objetos para o primeiro objeto
+
+        Object.freeze(obj)
+        obj.c = 1234
+        console.log(obj)    
+        </code>
+    </pre>
+
+	<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+    <script>
+        //Criação de um objeto
+        let a = 1 , b = 2 , c = 3;
+        const objeto1 = {a:a,b:b,c:c};
+        const objeto2 = {a,b,c} //ES6
+        const objeto3 = new Object({a,b,c})
+        console.log(objeto1,objeto2,objeto3);
+
+        //Métodos de um objeto
+        const pessoa = {
+            nome:'Fulano',
+            idade:'?',
+            dizerOi: function(){
+                console.log('Oi :)')
+            }
+        }
+        //getter/setter
+        const sequencia = {
+            _valor:0,//privado por convenção, mas qualquer um pode acessar
+            get valor(){return this._valor++},
+            set valor(valor){_valor=valor;}
+        }
+
+        //Funções importantes de objetos
+        console.log(Object.keys(pessoa))
+        console.log(Object.values(pessoa))
+        console.log(Object.entries(pessoa))
+
+        Object.entries(pessoa).forEach(([chave, valor]) => {
+            console.log(`${chave}: ${valor}`)
+        })
+
+        Object.defineProperty(pessoa, 'dataNascimento', {
+            enumerable: true,
+            writable: false,
+            value: '01/01/2019'
+        })
+
+        pessoa.dataNascimento = '01/01/2017'
+        console.log(pessoa.dataNascimento)
+        console.log(Object.keys(pessoa))
+
+        // Object.assign (ECMAScript 2015)
+        const dest = { a: 1 }
+        const o1 = { b: 2 }
+        const o2 = { c: 3, a: 4 }
+        const obj = Object.assign(dest, o1, o2)//passa os atributos dos outros objetos para o primeiro objeto
+
+        Object.freeze(obj)
+        obj.c = 1234
+        console.log(obj)
+
+	</script>
+</body>
+
+</html>

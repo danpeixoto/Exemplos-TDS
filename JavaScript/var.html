@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/code.css">
+    <title>Variável Var</title>
+</head>
+
+<body>
+    <h1><a href="./index.html">Variável var</a></h1>
+    <pre>
+        <code class="prettyprint">
+                var a = 1;
+                {
+                    {
+                        {
+                            {   
+                                var a = 2;
+                                console.log('Dentro:',a);
+                                var segredo = "[̲̅$̲̅(̲̅ιοο̲̅)̲̅$̲̅]";// escopo global
+                            }
+                        }
+                    }
+                }
+                console.log('Fora:',a);
+                console.log(segredo);
+
+                function escopoFuncao(){
+                    var escopo = '囧'
+                    console.log(escopo);
+                }
+        
+                escopoFuncao();
+
+                //console.log(escopo); //ERRO: Variável na definida
+
+                for(var i = 1 ; i&lt;=10; i++){
+                    console.log(i);
+                }
+                console.log('Valor final de i:',i);
+        </code>
+    </pre>
+
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+    <script>
+        var a = 1;
+        {
+            {
+                {
+                    {
+                        var a = 2;
+                        console.log('Dentro:', a);
+                        var segredo = "[̲̅$̲̅(̲̅ιοο̲̅)̲̅$̲̅]";// escopo global
+                    }
+                }
+            }
+        }
+        console.log('Fora:', a);
+        console.log(segredo);
+
+        function escopoFuncao() {
+            var escopo = '囧'
+            console.log(escopo);
+        }
+
+        escopoFuncao();
+        //console.log(escopo); //ERRO: Variável na definida
+
+        for(var i = 1 ; i<=10; i++){
+            console.log(i);
+        }
+        console.log('Valor final de i:',i);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/code.css">
+    <title>Funções</title>
+</head>
+
+<body>
+    <h1><a href="./index.html">Funções</a></h1>
+    <pre >
+        <code class="prettyprint">
+            //Forma literal de uma função
+            function saudacao() {
+                consol.log('Olá.')
+            }
+    
+            function soma(a, b = 0) {
+                return a + b;
+            }
+    
+            console.log(soma(10, 2));
+            console.log(soma(10));
+    
+            function subtracao(...args) {
+                console.log('Args:', args);
+                return args.reduce((accumulator, currentValue) => {
+                    return accumulator - currentValue;
+                });
+            }
+            console.log(subtracao(2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2));
+    
+            //Arrow function
+            const dobro = (numero) => {
+                return 2 * numero;
+            };
+            console.log(dobro(2));
+    
+            //Arrow funcion de linha 
+            const potencia = (base, expoente) => base ** expoente;
+            console.log(potencia(2, 5));
+    
+            //Função anônima
+            function imprimirResultado(a, b, operacao = soma) {
+                console.log(operacao(a, b))
+            }
+            
+            imprimirResultado(20,10,function(a,b){//passamos uma função anônima como um parâmetro para uma outra função
+                return a/b;
+            });
+    
+            const funcaoAnonima = function(){
+                console.log('sou anonima');
+            }
+            funcaoAnonima();
+    
+            // Funções callback são funções passadas como parametros para outras funções
+            setTimeout(() => {
+                console.log('Sou uma função callback. É muito simples de me entender :)')
+            }, 5000);            
+        </code>
+    </pre>
+
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+    <script>
+        //Forma literal de uma função
+        function saudacao() {
+            consol.log('Olá.')
+        }
+
+        function soma(a, b = 0) {
+            return a + b;
+        }
+
+        console.log(soma(10, 2));
+        console.log(soma(10));
+
+        function subtracao(...args) {
+            console.log('Args:', args);
+            return args.reduce((accumulator, currentValue) => {
+                return accumulator - currentValue;
+            });
+        }
+        console.log(subtracao(2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2));
+
+        //Arrow function
+        const dobro = (numero) => {
+            return 2 * numero;
+        };
+        console.log(dobro(2));
+
+        //Arrow funcion de linha 
+        const potencia = (base, expoente) => base ** expoente;
+        console.log(potencia(2, 5));
+
+        //Função anônima
+        function imprimirResultado(a, b, operacao = soma) {
+            console.log(operacao(a, b))
+        }
+        
+        imprimirResultado(20,10,function(a,b){//passamos uma função anônima como um parâmetro para uma outra função
+            return a/b;
+        });
+
+        const funcaoAnonima = function(){
+            console.log('sou anonima');
+        }
+        funcaoAnonima();
+
+        // Funções callback são funções passadas como parametros para outras funções
+        setTimeout(() => {
+            console.log('Sou uma função callback. É muito simples de me entender :)')
+        }, 5000);
+
+    </script>
+</body>
+
+</html>

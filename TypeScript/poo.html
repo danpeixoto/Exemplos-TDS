@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/code.css">
+    <title>POO</title>
+</head>
+
+<body>
+    <h1><a href="./index.html">POO</a></h1>
+    <pre>
+        <code class="prettyprint">
+            interface IPessoa{
+                nome:string;
+                sobrenome:string;
+                cumprimentar:(string)=>string;
+            }
+            
+            class Funcionario implements IPessoa{
+                nome:string;
+                sobrenome:string;
+                funcao:string;
+                constructor(nome:string , sobrenome:string,funcao:string){
+                    this.nome = nome;
+                    this.sobrenome = sobrenome;
+                    this.funcao = funcao;
+                }
+                cumprimentar = (nomePessoa:string):string=>{
+                    return `Olá ${nomePessoa}, meu nome é ${this.nome} e eu sou ${this.funcao}`;
+                }
+            }
+            
+            let programador = new Funcionario('Bruce','Wayne','Programador');
+            
+            console.log(programador.cumprimentar('Daniel'));
+            
+            
+            </code>
+        </pre>
+
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+    <script src='./scripts/poo.js'></script>
+</body >
+
+</html >

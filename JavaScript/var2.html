@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/code.css">
+    <title>Variável Var</title>
+</head>
+
+<body>
+    <h1><a href="./index.html">Variável var</a></h1>
+    <pre>
+        <code class="prettyprint">
+                const funcs = [];
+
+                for(var i = 1 ; i&lt;=10; i++){
+                    funcs.push(()=>{
+                        console.log(i);
+                    });
+                } 
+                funcs[2]();
+                funcs[8](); 
+                //isso acontece pq var nâo possui escopode bloco
+        </code>
+    </pre>
+
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+    <script>
+        const funcs = [];
+
+        for(var i = 1 ; i<=10; i++){
+            funcs.push(()=>{
+                console.log(i);
+            });
+        }
+        funcs[2]();
+        funcs[8]();        
+        //isso acontece pq var nâo possui escopode bloco
+    </script>
+</body>
+
+</html>

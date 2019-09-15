@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/code.css">
+    <title>Variável Let</title>
+</head>
+
+<body>
+    <h1><a href="./index.html">Variável let</a></h1>
+    <pre>
+        <code class="prettyprint">
+                    let a = 1;
+                    let b = 2;
+                    {
+                        {
+                            {
+                                {
+                                    let b = 3;
+                                    console.log('Dentro:', a,b);
+                                }
+                            }
+                        }
+                    }
+                    console.log('Fora:', a,b);
+    
+                    function escopoFuncao(){
+                        let escopo = '囧'
+                        console.log(escopo);
+                    }
+            
+                    escopoFuncao();
+    
+                    //console.log(escopo); //ERRO: Variável na definida
+    
+                    for(let i = 1 ; i&lt;=10; i++){
+                        console.log(i);
+                    }
+                    //console.log('Valor final de i:', i); //ERRO: Variavel não definida.
+            </code>
+        </pre>
+
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+    <script>
+        let a = 1;
+        let b = 2;
+        {
+            {
+                {
+                    {
+                        let b = 3;
+                        console.log('Dentro:', a, b);
+                    }
+                }
+            }
+        }
+        console.log('Fora:', a, b);
+
+        function escopoFuncao() {
+            let escopo = '囧'
+            console.log(escopo);
+        }
+
+        escopoFuncao();
+        // console.log(escopo); //ERRO: Variável na definida
+
+        for (let i = 1; i <= 10; i++) {
+            console.log(i);
+        }
+        //console.log('Valor final de i:', i); //ERRO: Variavel não definida.
+    </script>
+</body>
+
+</html>

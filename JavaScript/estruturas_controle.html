@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/code.css">
+    <title>Estrutura de Controle</title>
+</head>
+
+<body>
+    <h1><a href="./index.html">Estrutura de Controle</a></h1>
+    <pre>
+        <code class="prettyprint">
+            let minhaIdade = 20;
+
+            if (minhaIdade >= 18) {
+                console.log('Você já pode dirigir.');
+            } else {
+                console.log('Pede um uber.');
+            }
+    
+            let pizzaPedacos = 8;
+            let pedacosComidos = 0;
+    
+            if (pedacosComidos == 0) {
+                console.log('Muita pizza sobrando');
+            } else if (pedacosComidos != pizzaPedacos) {
+                console.log('Tem algum pedaço ainda.');
+            } else {
+                console.log('Acabou a pizza :(');
+            }
+    
+    
+            console.log('Operadores == e ===');
+            console.log('== significa parecido, ignora o tipo e compara o valor');
+            console.log(1 == 1);
+            console.log(1 == '1');
+            console.log('=== significa igual, compara o valor e também o tipo');
+            console.log(1 === 1);
+            console.log(1 === '1');
+            // de preferência para o operador ===, ele evita problemas de tipos diferentes e valores iguais em seu software
+    
+            switch (new Date().getDay()) {
+                case 0:
+                    console.log('Domingo');
+                    break;
+                case 1:
+                    console.log('Segunda');
+                    break;
+                case 2:
+                    console.log('Terça');
+                    break;
+                case 3:
+                    console.log('Quarta');
+                    break;
+                case 4:
+                    console.log('Quinta');
+                    break;
+                case 5:
+                    console.log('Sexta');
+                    break;
+                default:
+                    console.log('Sábado');
+            }
+            switch (new Date().getDay()) {
+                case 0:
+                case 1:
+                case 2:
+                case 3:
+                case 4:
+                case 5:
+                    console.log('Ainda não é sabado ?! :(');
+                    break;
+                default:
+                    console.log('Sábado');
+            }
+    
+    
+            console.log(minhaIdade >= 18 ? 'Vou dirigindo' : 'Vou de uber');
+            let planetaNatal = 'Terra';
+            console.log(planetaNatal === 'Terra' ? 'Terráqueo' : 'Alienigena');
+    
+            let dia = new Date().getDay();
+            let diaDaSemana = dia === 0 ? console.log('Domingo') : (dia === 1 ? console.log('Segunda') : (dia === 2 ? console.log('Terça') : (dia === 3 ? console.log('Quarta') : (dia === 4 ? console.log('Quinta') :
+            (dia === 5 ? console.log('Sexta') : console.log('Sábado'))))));          
+        </code>
+    </pre>
+
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+    <script>
+
+        let minhaIdade = 20;
+
+        if (minhaIdade >= 18) {
+            console.log('Você já pode dirigir.');
+        } else {
+            console.log('Pede um uber.');
+        }
+
+        let pizzaPedacos = 8;
+        let pedacosComidos = 0;
+
+        if (pedacosComidos == 0) {
+            console.log('Muita pizza sobrando');
+        } else if (pedacosComidos != pizzaPedacos) {
+            console.log('Tem algum pedaço ainda.');
+        } else {
+            console.log('Acabou a pizza :(');
+        }
+
+
+        console.log('Operadores == e ===');
+        console.log('== significa parecido, ignora o tipo e compara o valor');
+        console.log(1 == 1);
+        console.log(1 == '1');
+        console.log('=== significa igual, compara o valor e também o tipo');
+        console.log(1 === 1);
+        console.log(1 === '1');
+        // de preferência para o operador ===, ele evita problemas de tipos diferentes e valores iguais em seu software
+
+        switch (new Date().getDay()) {
+            case 0:
+                console.log('Domingo');
+                break;
+            case 1:
+                console.log('Segunda');
+                break;
+            case 2:
+                console.log('Terça');
+                break;
+            case 3:
+                console.log('Quarta');
+                break;
+            case 4:
+                console.log('Quinta');
+                break;
+            case 5:
+                console.log('Sexta');
+                break;
+            default:
+                console.log('Sábado');
+        }
+        switch (new Date().getDay()) {
+            case 0:
+            case 1:
+            case 2:
+            case 3:
+            case 4:
+            case 5:
+                console.log('Ainda não é sabado ?! :(');
+                break;
+            default:
+                console.log('Sábado');
+        }
+
+
+        console.log(minhaIdade >= 18 ? 'Vou dirigindo' : 'Vou de uber');
+        let planetaNatal = 'Terra';
+        console.log(planetaNatal === 'Terra' ? 'Terráqueo' : 'Alienigena');
+
+        let dia = new Date().getDay();
+        let diaDaSemana = dia === 0 ? console.log('Domingo') : (dia === 1 ? console.log('Segunda') : (dia === 2 ? console.log('Terça') : (dia === 3 ? console.log('Quarta') : (dia === 4 ? console.log('Quinta') :
+        (dia === 5 ? console.log('Sexta') : console.log('Sábado'))))));
+
+    </script>
+</body>
+
+</html>
